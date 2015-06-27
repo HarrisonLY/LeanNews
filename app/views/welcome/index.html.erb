@@ -1,26 +1,14 @@
-<nav class="navbar navbar-default navbar-fixed-top" style="background-color: transparent; border: none; position: absolute;">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img alt="LeanNews" src="/assets/LeanNews_Horizontal.png" style="max-height: 40px; margin-top: -9px">
-      </a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <a class="navbar-brand" href="https://www.facebook.com/leannewsio/?ref=a">
-        <img alt="Brand" src="/assets/facebook_circle.png" style="max-height: 30px; margin-top: -5px">
-      </a>
-      <a class="navbar-brand" href="https://twitter.com/LeanNews_io/?ref=a">
-        <img alt="Brand" src="/assets/twitter_circle.png" style="max-height: 30px; margin-top: -5px">
-      </a>
-          </ul>
-  </div>
-</nav>
+<div class="jumbotron" style=" height: 550px;">
+  <div class="container" style="position: relative; top: 50%; transform: translateY(-50%); text-align: center">
+
+<h1>LeanNews Bruh</h1>
+<p>Be A Man. Sign Up.</p>
+<%= form_tag('/welcome/subscribe', method: "post", id: "subscribe",) do -%>
+   <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
+   <%= submit_tag("Join!") %>
+<% end %>
 
 
-<div class="jumbotron" style="  z-index: -1; height: 575px;">
-    <div class="container">
-        <h1>Signup!</h1>
-        <p> test </p>
     </div>
 </div>
 
@@ -77,50 +65,16 @@
         </div>
         <div class="row">
             <div class="col-xs-6 col-sm-4 portfolio-item">
-                <img class="img-responsive" src="/assets/featured_1.png" style="max-height: 50px">
+              <img class="img-responsive" src="/assets/featured_1.png" style="height: 50px;left: 0;right: 0;margin-left: auto;margin-right: auto;">
             </div>
             <div class="col-xs-6 col-sm-4 portfolio-item">
-                <img class="img-responsive" src="/assets/featured_2.png" style="max-height: 50px">
+              <img class="img-responsive" src="/assets/featured_2.png" style="height: 50px;left: 0;right: 0;margin-left: auto;margin-right: auto;">
             </div>
             <div class="col-xs-6 col-sm-4 portfolio-item">
-                <img class="img-responsive" src="/assets/featured_3.png" style="max-height: 50px">
+              <img class="img-responsive" src="/assets/featured_1.png" style="height: 50px;left: 0;right: 0;margin-left: auto;margin-right: auto;">
             </div>
         </div>
 
         <hr style="border-color: #eee;">
        </div>
     </div>
-
-
-
-
-
-
-
-    <footer class="footer-distributed">
-
-      <div class="footer-right">
-
-        <a href="https://www.facebook.com/leannewsio/?ref=a"><i class="fa fa-facebook"></i></a>
-        <a href="https://twitter.com/LeanNews_io/?ref=a"><i class="fa fa-twitter"></i></a>
-        <a href="https://angel.co/leannews/?ref=a"><i class="fa fa-angellist"></i></a>
-      </div>
-
-      <div class="footer-left">
-
-        <p class="footer-links">
-          <a href="#">Recent News</a>
-          ·
-          <a href="#">Events</a>
-          ·
-          <a href="#">About</a>
-          ·
-          <a href="#">Press</a>
-          ·
-          <a href="#">Contact</a>
-        </p>
-
-        <p>LeanNews &copy; 2015</p>
-      </div>
-
-    </footer>
