@@ -1,0 +1,38 @@
+<div class="jumbotron" style=" height: 550px;">
+  <div class="container" style="position: relative; top: 50%; transform: translateY(-50%);">
+    <h1 style="text-align: center; ">Contact Us</h1>
+
+  <%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+    <div style="height: 300px; width: 79%; margin-top:20px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; margin-right:auto; margin-left:auto">
+     <fieldset style="border: none;">
+       <div class="text-center" style="font-size: 18px; margin-top: 12px; color: black;">Please submit your comments, questions, or concerns below.
+       </div>
+
+            <!-- Name input-->
+            <div class="form-group" style="padding-left:10%; padding-right: 10%; margin-top: 12px">
+              <input id="contact_name" name="contact[name]" type="text" placeholder="Your name" class="form-control" required="required" autofocus="autofocus" aria-required="true">
+            </div>
+
+            <!-- Email input-->
+            <div class="form-group" style="padding-left:10%; padding-right: 10%;">
+              <input aria-required="true" id="contact_email" name="contact[email]" type="email"placeholder="Your email" class="form-control" required="required">
+            </div>
+    
+            <!-- Message body -->
+            <div class="form-group" style="padding-left:10%; padding-right: 10%;">
+              <textarea aria-required="true" class="form-control" id="contact_message" name="contact[message]" placeholder="Please enter your message here..." rows="3.5" required="required"></textarea>
+            </div>
+
+            <!-- Form actions -->
+            <div class="form-group" style="padding-left:10%; padding-right: 10%;">
+                <input style="width: 100px;" class="btn btn-primary btn-sm" name="commit" type="submit" value="Send message">
+            </div>
+          </fieldset>
+        </div>
+      </form>
+     <% end %>
+    </div>
+   <br>
+  <br>
+</div>
+
