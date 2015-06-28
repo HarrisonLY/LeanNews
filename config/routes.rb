@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
  get "about" => 'welcome#about'
  get "press" => 'welcome#press'
+ get "contact" => 'welcome#contact'
 
- match '/contacts', to: 'contacts#new', via: 'get'
- resources "contacts", only: [:new, :create]
+ #match '/contacts', to: 'contacts#new', via: 'get'
+ #resources "contacts", only: [:new, :create]
 
 end
