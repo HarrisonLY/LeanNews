@@ -1,7 +1,9 @@
-<div class="jumbotron" style=" height: 550px;">
-<div style="text-align: center; margin-top: 175px; padding-left: 15px; padding-right: 15px; ">
+<div class="jumbotron" style=" height: 550px; background: linear-gradient(rgba(243, 234, 234, 0.57), rgba(233, 145, 0, 0.45098)), url('assets/bg.jpg'); background-size: cover;">
 
-<h2>Trending Tech & Startup News Summarized Daily.</h2>
+<div style="text-align: center; margin-top: 175px; padding-left: 15px; padding-right: 15px;">
+
+<h2 style="text-shadow: rgb(132, 132, 132) 1px 2px 5px, rgb(255, 255, 255) 3px 1px 3px;">Trending Tech &amp; Startup News Summarized Daily.</h2>
+
 <p>Read Less. Know More.</p>
 
 <%= form_tag('/welcome/subscribe', method: "post", id: "subscribe",) do -%>
@@ -9,9 +11,9 @@
    <%= submit_tag("Join!") %>
 <% end %>
 
+</div>
+</div>
 
-</div>
-</div>
 
 <div style="background-color: #fff;">
 <div class="container">
