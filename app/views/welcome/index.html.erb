@@ -1,15 +1,33 @@
-<div class="jumbotron" style=" height: 550px; background: linear-gradient(rgba(243, 234, 234, 0.57), rgba(233, 145, 0, 0.45098)), url('assets/bg-549fb81889acdd9a4afe4534d731bb142e986df198677eca4fa73e89ed374c45.jpg'); background-size: cover;">
+<div style=" height: 550px; background: linear-gradient(rgba(243, 234, 234, 0.57), rgba(233, 145, 0, 0.45098)), url('assets/bg-549fb81889acdd9a4afe4534d731bb142e986df198677eca4fa73e89ed374c45.jpg'); background-size: cover;">
 
-<div style="text-align: center; margin-top: 175px; padding-left: 15px; padding-right: 15px;">
+<div style="text-align: center; padding-top: 175px; padding-left: 15px; padding-right: 15px;">
 
-<h2 style="text-shadow: rgb(132, 132, 132) 1px 2px 5px, rgb(255, 255, 255) 3px 1px 3px;">Trending Tech &amp; Startup News Summarized Daily.</h2>
+<h2 style="text-shadow: rgb(132, 132, 132) 1px 2px 5px, rgb(255, 255, 255) -2px -1px 9px; font-family: fantasy; font-size: 35px; margin-left: 10%; margin-right: 10%; font-weight: 900; line-height: 1.3;">Trending Tech &amp; Startup News <br> Summarized Daily</h2>
 
-<p>Read Less. Know More.</p>
+ <%
+=begin %>
+
+<p style="font-weight: 500;">Read Less. Know More.</p>
+
 
 <%= form_tag('/welcome/subscribe', method: "post", id: "subscribe",) do -%>
    <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
    <%= submit_tag("Join!") %>
 <% end %>
+
+<%
+=end %>
+
+<form class="form-group" id="subscribe" action="/welcome/subscribe" accept-charset="UTF-8" method="post" style="margin: auto; left: 0; right: 0; max-width: 300px;">
+   <input name="utf8" type="hidden" value="✓">
+   <input type="hidden" name="authenticity_token"> 
+   <div class="input-group">
+    <input class="form-control" id="email" placeholder="Email Address" type="email" name="email[address]" style="height: 40px; font-family: monospace;">
+   <span class="input-group-btn">
+    <input class="btn btn-custom btn-md btn-block" type="submit" style="background-color: orange; height: 40px; font-family: monospace;" value="Join">
+   </span>
+  </div>
+</form>
 
 </div>
 </div>
@@ -62,24 +80,24 @@
     </div>
 
 
+ <%
+=begin %>
+
+
 <div style="background-color: #eee;">
 <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h3 class="page-header" style="text-align: center"> Featured On </h3>
+                <h3 class="page-header" style="text-align: center"> As Seen On </h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6 col-sm-4 portfolio-item">
-              <img class="img-responsive" src="/assets/featured_1-089ee6cd89fd7164895f98d82fec548dea08a84c7c067a9e22a0a628b952160d.png" style="height: 50px;left: 0;right: 0;margin-left: auto;margin-right: auto;">
+            <div class="col-xs-6 portfolio-item" style="padding-top: 1%;">
+             <img class="img-responsive" src="assets/Backstories-24a66c575008e4973c55b6701c0d73d43ecc72274999b07044b31076143edcaa.png" alt="Backstories">
                 <br>
             </div>
-            <div class="col-xs-6 col-sm-4 portfolio-item">
-              <img class="img-responsive" src="/assets/featured_2-4399cd5955a6de6e60641c8e49cc8af2e42202182c5a66e2e8e493a5a2d8c1c7.png" style="height: 50px;left: 0;right: 0;margin-left: auto;margin-right: auto;">
-                <br>
-            </div>
-            <div class="col-xs-6 col-sm-4 portfolio-item">
-              <img class="img-responsive" src="/assets/featured_1-089ee6cd89fd7164895f98d82fec548dea08a84c7c067a9e22a0a628b952160d.png" style="height: 50px;left: 0;right: 0;margin-left: auto;margin-right: auto;">
+            <div class="col-xs-6 portfolio-item">
+             <img class="img-responsive" src="assets/Release_Wire-eb49785b272906892de0ef5819cd548577dd7552ebf528cfab30a81a57b10e25.png" alt="Release Wire">
                 <br>
             </div>
         </div>
@@ -89,18 +107,22 @@
     </div>
 
 
-<div style="background-color: #ddd; height: 250px;">
-<div class="container" style=" text-align: center; padding-top: 35px;">
-
-<h2 style="padding-bottom: 15px; margin-top: -5px;"> Get Lean. Read Lean. LeanNews. </h2>
+<%
+=end %>
 
 
-<p>Join The Community</p>
-<%= form_tag('/welcome/subscribe', method: "post", id: "subscribe",) do -%>
-   <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
-   <%= submit_tag("Join!") %>
-<% end %>
+<div style="height: 250px; background: linear-gradient(rgba(243, 234, 234, 0.568627), rgba(233, 145, 0, 0.45098));">
+<div class="container" style=" text-align: center; padding-top: 45px;">
 
+<h2 style="padding-bottom: 15px; margin-top: -5px;font-family: fantasy;"> Startup & Tech News Summarized in 60 Seconds </h2>
+
+
+<form class="form-group" id="subscribe" action="/welcome/subscribe" accept-charset="UTF-8" method="post" style="margin: auto; left: 0; right: 0; max-width: 300px;">
+   <input name="utf8" type="hidden" value="✓">
+   <input type="hidden" name="authenticity_token"> 
+    <input class="form-control" id="email" placeholder="Email Address" type="email" name="email[address]" style="margin-bottom: 15px; text-align: center; height: 40px;font-family: monospace;">
+    <input class="btn btn-custom btn-md btn-block" type="submit" style="background-color: orange; height: 40px; font-family: monospace;" value="Join The Community">
+</form>
 
     </div>
 </div>

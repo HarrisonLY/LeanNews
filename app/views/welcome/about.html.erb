@@ -1,28 +1,43 @@
 <div style="height: 325px; background: linear-gradient(rgba(243, 234, 234, 0.57), rgba(233, 145, 0, 0.45098)); background-size: cover;">
-  <div class="container" style="padding-top: 130px; padding-left: 20px; padding-right: 20px">
+<div class="container" style="padding-top: 130px; padding-left: 20px; padding-right: 20px">
 
 <p style="text-align: center;font-size: 40px;">About</p>
-  	</div>
+</div>
 </div>
 
 <div style="background-color: #fff;">
   <div class="container">
-    <div class="col-md-6">
-        <h3 class="page-header" style="text-align: center"> Why "LeanNews"? </h3>
+<div class="thumbnail col-md-6" style="height: 250px; padding-top: 90px;">  
+    <h3 style="text-align: center"> Why LeanNews </h3>
+<div class="caption">
             <p> You shouldn't have to waste time browsing the web reading long, opinionated, boring news articles. The news should be lean, like Schwarzenegger in his prime. All muscle no fat. With us it is. We give you enough info to keep on top of startups and tech, in less than 60 seconds, every day. That's why LeanNews is called... LeanNews. </p> 
     </div>
-    <div class="col-md-6">
-        <h3 class="page-header" style="text-align: center"> The Anchormen </h3>
-            <p> Just two dudes who love startups and tech. Harrison & Ed met at a startup event back in 2014 and knew that eventually they wanted to launch something together. "One day we were chatting about startups and tech, the next day we were writing about 'em. It basically fell into our laps, and we jumped right in." If you're interested in learning more, let's grab coffee. </p> 
     </div>
+<div class="thumbnail col-md-6" style="height: 250px; padding-top: 90px;">  
+    <h3 style="text-align: center"> The Anchormen </h3>
+<div class="caption">
+            <p> Just two dudes who love startups and tech. Harrison & Ed met at a startup event back in 2014 and knew that eventually they wanted to launch something together. "One day we were chatting about startups and tech, the next day we were writing about 'em. It basically fell into our laps, and we jumped right in." If you're interested in learning more, let's grab coffee. </p> 
+    </div> 
+    </div> 
+   </div>
+
+  </div>
+
+ </div>
 </div>
 
-</div>
 
-<hr>
+<script>
 
-	</div>
-</div>
+    $("[rel='tooltip']").tooltip();    
+ 
+    $('.thumbnail').hover(
+        function(){
+            $(this).find('.caption').slideDown(250); //.fadeIn(250)
+        },
+        function(){
+            $(this).find('.caption').slideUp(250); //.fadeOut(205)
+        }
+    ); 
 
-
-
+</script>
