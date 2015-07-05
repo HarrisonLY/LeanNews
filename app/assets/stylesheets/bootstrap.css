@@ -6851,7 +6851,6 @@ button.close {
     background-color: rgba(255, 255, 255, 0);
     margin: 2.5% 1.25%;
     border: 1px dotted orange;
-
 }
  
 .caption {
@@ -6867,7 +6866,6 @@ button.close {
     color:#fff !important;
     z-index:2;
     font-family: avenir-book;
-
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
