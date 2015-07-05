@@ -1956,7 +1956,7 @@ pre code {
     width: 58.33333333%;
   }
   .col-md-6 {
-    width: 50%;
+    width: 47.5%;
 
   }
   .col-md-5 {
@@ -6848,7 +6848,10 @@ button.close {
 .thumbnail {
     position:relative;
     overflow:hidden;
-    background-color: rgb(255, 241, 222);
+    background-color: rgba(255, 255, 255, 0);
+    margin: 2.5% 1.25%;
+    border: 1px dotted orange;
+
 }
  
 .caption {
@@ -6861,11 +6864,9 @@ button.close {
     left: 0;
     right: 0;
     display: none;
-    text-align:center;
     color:#fff !important;
     z-index:2;
-    font-style: oblique;
-    font-weight: 500;
+    font-family: avenir-book;
 
 }
 

@@ -2,7 +2,7 @@
 
 <div style="text-align: center; padding-top: 175px; padding-left: 15px; padding-right: 15px;">
 
-<h2 style="text-shadow: rgb(132, 132, 132) 1px 2px 5px, rgb(255, 255, 255) -2px -1px 9px; font-family: fantasy; font-size: 35px; margin-left: 10%; margin-right: 10%; font-weight: 900; line-height: 1.3;">Trending Tech &amp; Startup News <br> Summarized Daily</h2>
+<h2 style="text-shadow: rgb(132, 132, 132) 1px 2px 5px, rgb(255, 255, 255) -2px -1px 9px; font-family: fantasy; font-size: 35px; margin-left: 10%; margin-right: 10%; font-weight: 900; line-height: 1.3; font-variant: small-caps;">Trending Tech &amp; Startup News <br> Summarized Daily</h2>
 
  <%
 =begin %>
@@ -120,8 +120,12 @@
 <form class="form-group" id="subscribe" action="/welcome/subscribe" accept-charset="UTF-8" method="post" style="margin: auto; left: 0; right: 0; max-width: 300px;">
    <input name="utf8" type="hidden" value="✓">
    <input type="hidden" name="authenticity_token"> 
-    <input class="form-control" id="email" placeholder="Email Address" type="email" name="email[address]" style="margin-bottom: 15px; text-align: center; height: 40px;font-family: monospace;">
-    <input class="btn btn-custom btn-md btn-block" type="submit" style="background-color: orange; height: 40px; font-family: monospace;" value="Join The Community">
+   <div class="input-group">
+    <input class="form-control" id="email" placeholder="Email Address" type="email" name="email[address]" style="height: 40px; font-family: monospace;">
+   <span class="input-group-btn">
+    <input class="btn btn-custom btn-md btn-block" type="submit" style="background-color: orange; height: 40px; font-family: monospace;" value="Join">
+   </span>
+  </div>
 </form>
 
     </div>
