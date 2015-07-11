@@ -1,22 +1,8 @@
-<div style=" height: 550px; background: linear-gradient(rgba(25, 25, 25, 0.57), rgba(0, 0, 0, 0.45098)), url('assets/bg-549fb81889acdd9a4afe4534d731bb142e986df198677eca4fa73e89ed374c45.jpg'); background-size: cover;">
+<div style="height: 550px; background: linear-gradient(rgba(25, 25, 25, 0.57), rgba(0, 0, 0, 0.45098)), url('assets/bg-549fb81889acdd9a4afe4534d731bb142e986df198677eca4fa73e89ed374c45.jpg'); background-size: cover;">
 
 <div style="text-align: center; padding-top: 175px; padding-left: 15px; padding-right: 15px;">
 
 <h2 style="  font-size: 35px; margin-left: 7%; margin-right: 7%;  line-height: 1.2;color: white;  font-family: Ubuntu;">Trending Tech &amp; Startup News <br> Summarized Daily</h2>
-
- <%
-=begin %>
-
-<p style="font-weight: 500;">Read Less. Know More.</p>
-
-
-<%= form_tag('/welcome/subscribe', method: "post", id: "subscribe",) do -%>
-   <%= email_field(:email, :address, {id: "email", placeholder: "email address"}) %>
-   <%= submit_tag("Join!") %>
-<% end %>
-
-<%
-=end %>
 
 <form class="form-group" id="subscribe" action="/welcome/subscribe" accept-charset="UTF-8" method="post" style="margin: auto; left: 0; right: 0; max-width: 300px;">
    <input name="utf8" type="hidden" value="✓">
@@ -29,7 +15,14 @@
   </div>
 </form>
 
+<p class="recent_news" style="margin-top: 100px; color: white;font-size: 13px;font-family: Montserrat;">Still Need Convincing? <br>
+<a class="link" href="http://www.leannews.io/news" style="
+    color: #3CC3FF;" target="blank"> Check Out The Latest LeanNews</a>
+</p>
+
 </div>
+
+
 </div>
 
 
