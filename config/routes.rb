@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+
+
  root 'welcome#index'
  post 'welcome/subscribe' => 'welcome#subscribe'
 
@@ -7,14 +9,14 @@ Rails.application.routes.draw do
  get "press" => 'welcome#press'
  get "contact" => 'welcome#contact'
 
- #map.sitemap '/sitemap.xml', :controller => 'sitemap'
+ resources :dailies
+ resources :daily
 
+ get "daily-admin" => 'dailies#admin'
+
+ #map.sitemap '/sitemap.xml', :controller => 'sitemap'
  #match '/contacts', to: 'contacts#new', via: 'get'
  #resources "contacts", only: [:new, :create]
-
-
-#match "/daily" => redirect("/daily/")  
-
 
 
 end

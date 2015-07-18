@@ -1,0 +1,27 @@
+<%= render 'header' %>
+
+<div style="min-height: 500px;padding-top: 60px;">
+
+<%= link_to 'Edit', edit_daily_path(@daily) %> |
+<%= link_to 'Back', dailies_path %>
+
+<span id="notice"><%= notice %></span>
+
+
+  <%= @daily.content.html_safe %>
+
+
+<span style="left: 0; position: absolute;margin-left: 40px;">
+<%= link_to("← Newer News", @daily.next_post) if @daily.next_post %>
+</span>
+
+
+<span style="right: 0; position: absolute;margin-right: 40px;">
+<%= link_to("Older News →", @daily.previous_post) if @daily.previous_post %>
+</span>
+
+
+<br>
+<br>
+
+</div>

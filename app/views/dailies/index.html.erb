@@ -1,0 +1,17 @@
+<%= render 'header' %>
+
+<div style="min-height: 500px;padding-top: 60px;">
+
+
+
+  <%= @recent.content.html_safe if @recent %>
+
+<span style="right: 0; position: absolute;margin-right: 40px;">
+<%= link_to("Older News →", @second) if @second %>
+</span>
+
+<br>
+<br>
+
+
+</div>

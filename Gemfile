@@ -15,7 +15,9 @@ group :production do
   gem 'pg'
 end
 
- gem "rack-reverse-proxy", :require => "rack/reverse_proxy" 
+#gem "rack-reverse-proxy", :require => "rack/reverse_proxy" 
+#gem 'ruby-wordpress', :require => 'wordpress'
+gem 'bloggy'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
