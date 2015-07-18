@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/amro/gibbon.git
-  revision: be224d5729bc2881c86f49899863772639c4a2ce
+  revision: 1b7ec125279600409c31f4ec276572318532ebb0
   specs:
-    gibbon (1.1.6)
+    gibbon (1.2.0)
       httparty
       multi_json (>= 1.9.0)
 
@@ -62,7 +62,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     eventmachine (1.0.7)
-    excon (0.45.3)
+    excon (0.45.4)
     execjs (2.5.2)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
@@ -97,6 +97,11 @@ GEM
       mini_portile (~> 0.6.0)
     pg (0.18.2)
     rack (1.6.4)
+    rack-proxy (0.5.17)
+      rack
+    rack-reverse-proxy (0.9.0)
+      rack (>= 1.0.0)
+      rack-proxy (~> 0.5)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.1)
@@ -184,6 +189,7 @@ DEPENDENCIES
   mail_form
   mailchimp-api
   pg
+  rack-reverse-proxy
   rails (= 4.2.1)
   rails_12factor
   sass-rails (~> 5.0)
