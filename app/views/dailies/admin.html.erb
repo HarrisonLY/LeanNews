@@ -1,34 +1,36 @@
-<%= render 'header' %>
+<div style="height: 150px; background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.59)) , url(assets/about-7b58b79edfb0231e6812ba29e16f15315fe4828606dc5df845d12eca47ddfa63.jpg);background-size: cover;">
 
-<div style="min-height: 500px;padding-top: 60px;">
+<div class="container" style="padding-top: 60px; padding-left: 20px; padding-right: 20px;">
 
-<p id="notice"><%= notice %></p>
+<p style="text-align: center; font-size: 30px; font-family: Ubuntu; font-weight: bold; color: white;">LeanDaily </p> 
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<p style="text-align: center; font-size: 15px; font-family: Ubuntu; font-weight: bold; color: white; margin-top: -10px;"> Admin Panel </p>
 
-  <tbody>
+</div>
+</div>
+
+<div style="min-height: 300px;">
+
+<div style="text-align: center; margin-top: 15px;">
+  <%= link_to 'New Daily Post', new_daily_path, :class => 'btn btn-success btn-sm' %>
+</div>
+
+
+
+<div class="container">
+  <h2>LeanDaily Posts</h2>          
+  <table class="table">
+    <thead>
     <% @dailies.each do |daily| %>
       <tr>
-        <td><%= daily.title %></td>
-        <td><%= link_to 'Show', daily %></td>
-        <td><%= link_to 'Edit', edit_daily_path(daily) %></td>
-        <td><%= link_to 'Destroy', daily, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to daily.title, daily %></td>
+        <td><%= link_to 'Edit', edit_daily_path(daily), :class => 'btn btn-primary btn-sm' %></td>
+        <td><%= link_to 'Destroy', daily, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Daily', new_daily_path %>
-
-<br>
-<br>
-
-
+    </tbody>
+  </table>
+</div>
+  
+</div>
 </div>
