@@ -13,8 +13,8 @@ Rails.application.routes.draw do
  resources :daily
  get "admin-daily" => 'dailies#admin'
 
- resources :users
- get 'signup' => 'users#new'
+ resources :users, :except => [:new]
+ #get 'signup' => 'users#new'
 
  resource :session
  get "signin" => "sessions#new"
