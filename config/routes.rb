@@ -9,9 +9,9 @@ Rails.application.routes.draw do
  get "contact" => 'welcome#contact'
  get "admin" => 'welcome#admin'
 
- resources :dailies
- resources :daily
+ resources :dailies, path: '/daily'
  get "admin-daily" => 'dailies#admin'
+
 
  resources :users, :except => [:new]
  #get 'signup' => 'users#new'
