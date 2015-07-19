@@ -1,6 +1,12 @@
 class SessionsController < ApplicationController
 
 def new
+    @user = User.new
+    if current_user
+    redirect_to current_user, notice: "Already Signed In!"
+  else
+    render :new
+  end
 end
 
 def create

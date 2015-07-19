@@ -13,16 +13,10 @@
 
 <div id="notice"><%= notice %></div>
 
-<div style="text-align: center; margin-top: 15px;">
-  <%= link_to 'New Daily Post', new_daily_path, :class => 'btn btn-success btn-sm' %>
-<br>
   <%= will_paginate @dailies %>
-</div>
-
-
 
 <div class="container">
-  <h2>LeanDaily Posts</h2>          
+  <h2>LeanDaily <%= link_to 'New Post', new_daily_path, :class => 'btn btn-success btn-sm' %> </h2>          
   <table class="table">
     <thead>
     <% @dailies.each do |daily| %>

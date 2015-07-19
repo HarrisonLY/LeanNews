@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-#before_action :require_correct_user, only: [:edit, :update]
+before_action :require_correct_user, only: [:show, :edit, :update]
 before_action :require_signin, except: [:new, :create]
-before_action :require_admin, only: [:destroy, :edit, :update]
+before_action :require_admin, only: [:destroy, :index]
 
 def index
-  @users = User.all
+  @users = User.order("created_at asc").page(params[:page]).per_page(5)
 end
 
 def show
@@ -24,9 +24,18 @@ def update
   end
 end
 
+
+
 def new
   @user = User.new
+    if current_user
+    redirect_to current_user, notice: "Already Signed In!"
+  else
+    render :new
+  end
 end
+
+
 
 def create
   @user = User.new(user_params)
@@ -37,6 +46,8 @@ def create
     render :new
   end 
 end
+
+
 
 def destroy
   @user = User.find(params[:id])

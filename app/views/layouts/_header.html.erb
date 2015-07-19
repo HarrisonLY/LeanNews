@@ -1,3 +1,35 @@
+<% if current_user_admin? %>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: transparent; border: none; position: absolute; style="z-index: 1;"">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="LeanNews" src="/assets/LeanNews_Horizontal_White_Orange-be273cd97fe785832052c92bb00a190bf18721fbee095197a1dbd176e15ddaab.png" style="max-height: 40px; margin-top: -9px">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style=" color: white; font-weight: 500; font-family: lora;">Admin Menu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="/admin-daily">Daily Admin</a></li>
+        <li><a href="/users">Users</a></li>
+        <li> <%= link_to 'Sign Out', session_path, method: :delete %> </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<% else %>
+
 <nav class="navbar navbar-default navbar-fixed-top" style="background-color: transparent; border: none; position: absolute; style="z-index: 1;"">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -7,3 +39,5 @@
     </div>
   </div>
 </nav>
+
+<% end %>
