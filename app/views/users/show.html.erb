@@ -1,0 +1,30 @@
+<div style="height: 150px; background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.59)) , url(assets/about-7b58b79edfb0231e6812ba29e16f15315fe4828606dc5df845d12eca47ddfa63.jpg);background-size: cover;">
+
+<div class="container" style="padding-top: 60px; padding-left: 20px; padding-right: 20px;">
+
+<p style="text-align: center; font-size: 30px; font-family: Ubuntu; font-weight: bold; color: white;">My Account</p> 
+
+</div>
+</div>
+
+<div style="min-height: 250px; margin: 20px 5%">
+
+<article id="user">
+  <header>
+    <h1><%= @user.name %></h1>
+    <h2><%= mail_to(@user.email) %></h2>
+  </header>
+</article>
+
+<footer>
+  <nav>
+    <%= link_to 'Edit Account', edit_user_path(@user), class: 'button' %>
+    <%= link_to 'Sign Out', session_path, method: :delete, class: 'button' %>
+    <%= link_to 'Delete Account', @user,
+                method: :delete,
+                data: { confirm: 'Are you sure you want to permanently delete your account?' },
+                class: 'button' %>
+  </nav>
+</footer>
+
+</div>
