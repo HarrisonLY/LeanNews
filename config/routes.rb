@@ -7,6 +7,7 @@ Rails.application.routes.draw do
  get "about" => 'welcome#about'
  get "press" => 'welcome#press'
  get "contact" => 'welcome#contact'
+ get "admin" => 'welcome#admin'
 
  resources :dailies
  resources :daily

@@ -17,6 +17,10 @@
           <a href="/press">Press</a>
           ·
           <a href="/contact">Contact</a>
+          <% if current_user_admin? %>
+          ·
+          <a href="/admin">Admin</a>
+          <% end %>
         </p>
 
         <p>LeanNews &copy; 2015</p>

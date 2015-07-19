@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
 skip_before_action :verify_authenticity_token
+before_action :require_admin, only: [:admin]
 
 def subscribe(optin = false)
 gb = Gibbon::API.new("95a9febb4b2d987fc66419798db9d8d2-us10")
@@ -9,5 +10,8 @@ gb.lists.subscribe({
        double_optin: optin,
     })
  end
+
+def admin
+end
 
 end
