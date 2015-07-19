@@ -3,7 +3,11 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
+   <% if @daily.new_record? %>
 	<%= f.input :slug, :input_html => { :value => Time.now.strftime("%m-%d-%Y") } %>
+   <% else %>
+	<%= f.input :slug %>
+   <% end %>
     <%= f.input :content %>
   </div>
 
