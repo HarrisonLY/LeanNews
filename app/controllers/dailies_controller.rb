@@ -14,6 +14,7 @@ class DailiesController < ApplicationController
   # GET /dailies/1
   # GET /dailies/1.json
   def show
+   @daily = Daily.find_by!(slug: params[:id])
   end
 
   def admin
@@ -72,11 +73,12 @@ class DailiesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_daily
-      @daily = Daily.find(params[:id])
+      @daily = Daily.find_by!(slug: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def daily_params
-      params.require(:daily).permit(:title, :content)
+      params.require(:daily).permit(:title, :content, :created_at, :updated_at, :slug)
     end
+
 end
