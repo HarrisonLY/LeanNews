@@ -15,7 +15,7 @@ class DailiesController < ApplicationController
   end
 
   def admin
-    @dailies = Daily.all
+    @dailies = Daily.order("created_at desc").page(params[:page]).per_page(5)
   end
 
   # GET /dailies/new
@@ -34,7 +34,7 @@ class DailiesController < ApplicationController
 
     respond_to do |format|
       if @daily.save
-        format.html { redirect_to @daily, notice: 'Daily was successfully created.' }
+        format.html { redirect_to @daily, notice: 'LeanDaily LeanDaily Post was successfully created.' }
         format.json { render :show, status: :created, location: @daily }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class DailiesController < ApplicationController
   def update
     respond_to do |format|
       if @daily.update(daily_params)
-        format.html { redirect_to @daily, notice: 'Daily was successfully updated.' }
+        format.html { redirect_to @daily, notice: 'LeanDaily LeanDaily Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @daily }
       else
         format.html { render :edit }
@@ -62,7 +62,7 @@ class DailiesController < ApplicationController
   def destroy
     @daily.destroy
     respond_to do |format|
-      format.html { redirect_to dailies_url, notice: 'Daily was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'LeanDaily Post was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

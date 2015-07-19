@@ -12,7 +12,7 @@ Rails.application.routes.draw do
  resources :dailies
  resources :daily
 
- get "daily-admin" => 'dailies#admin'
+ get "admin-daily" => 'dailies#admin'
 
  #map.sitemap '/sitemap.xml', :controller => 'sitemap'
  #match '/contacts', to: 'contacts#new', via: 'get'

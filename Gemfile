@@ -42,7 +42,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'mail_form'
 gem 'simple_form'
 
-
+gem 'will_paginate', '~> 3.0.6'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

@@ -11,8 +11,12 @@
 
 <div style="min-height: 300px;">
 
+<div id="notice"><%= notice %></div>
+
 <div style="text-align: center; margin-top: 15px;">
   <%= link_to 'New Daily Post', new_daily_path, :class => 'btn btn-success btn-sm' %>
+<br>
+  <%= will_paginate @dailies %>
 </div>
 
 
@@ -24,7 +28,7 @@
     <% @dailies.each do |daily| %>
       <tr>
         <td><%= link_to daily.title, daily %></td>
-        <td><%= link_to 'Edit', edit_daily_path(daily), :class => 'btn btn-primary btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_daily_path(daily), :class => 'btn btn-warning btn-sm' %></td>
         <td><%= link_to 'Destroy', daily, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
