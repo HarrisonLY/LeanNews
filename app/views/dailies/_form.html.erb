@@ -3,7 +3,7 @@
 
   <div class="form-inputs">
     <%= f.input :title %>
-    <%= f.input :slug, :placeholder => "MM-DD-YYYY"  %>
+	<%= f.input :slug, :input_html => { :value => Time.now.strftime("%m-%d-%Y") } %>
     <%= f.input :content %>
   </div>
 
