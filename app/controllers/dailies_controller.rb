@@ -17,8 +17,8 @@ class DailiesController < ApplicationController
   end
 
   def admin
-    @dailies = Daily.order("created_at desc").page(params[:page]).per_page(5)
-  end
+   @dailies = Daily.order("created_at desc").page(params[:page]).per_page(5)
+    end
 
   # GET /dailies/new
   def new
