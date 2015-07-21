@@ -14,6 +14,7 @@ Rails.application.routes.draw do
  get "admin-daily" => 'dailies#admin'
 
  resources :events
+ get "admin-event" => 'events#admin'
 
  resources :users, :except => [:new]
  #get 'signup' => 'users#new'

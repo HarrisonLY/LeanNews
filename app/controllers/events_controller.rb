@@ -12,6 +12,10 @@ class EventsController < ApplicationController
   def show
   end
 
+  def admin
+    @events = Event.order("created_at desc").page(params[:page]).per_page(5)
+  end
+
   # GET /events/new
   def new
     @event = Event.new

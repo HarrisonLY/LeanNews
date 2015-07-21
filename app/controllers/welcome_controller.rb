@@ -14,6 +14,7 @@ gb.lists.subscribe({
 def admin
   @dailies = Daily.order("created_at desc").page(params[:page]).per_page(3)
   @users = User.order("created_at desc").page(params[:page]).per_page(5)
+  @events = Event.order("created_at desc").page(params[:page]).per_page(5)
 end
 
 end
