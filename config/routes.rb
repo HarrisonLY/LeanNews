@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+
  root 'welcome#index'
  post 'welcome/subscribe' => 'welcome#subscribe'
 
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
  resources :dailies, path: '/daily'
  get "admin-daily" => 'dailies#admin'
 
+ resources :events
 
  resources :users, :except => [:new]
  #get 'signup' => 'users#new'
