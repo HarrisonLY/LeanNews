@@ -1,17 +1,67 @@
 <%= simple_form_for(@event) do |f| %>
   <%= f.error_notification %>
-
-  <div class="form-inputs">
-  	 <%= f.input :title %>
-  	 <%= f.input :location %>
-  	 <%= f.input :date %>
-  	 <%= f.input :start_time %>
-  	 <%= f.input :end_time %>
-  	 <%= f.input :price %>
-  	 <%= f.input :who %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+  <fieldset>
+    <ol>
+      <li class="required">
+        <%= f.label :title, 'Event Name' %>
+        <%= f.text_field :title, autofocus: true %>
+      </li>
+      <li class="required">
+        <%= f.label :address %>
+        <%= f.text_field :address, size: 30 %>
+      </li>
+      <li class="required">
+        <%= f.label :country %>
+        <%= f.text_field :country, size: 30 %>
+      </li>
+      <li class="required">
+        <%= f.label :state %>
+        <%= f.text_field :state, size: 30 %>
+      </li>
+      <li class="required">
+        <%= f.label :city %>
+        <%= f.text_field :city, size: 30 %>
+      </li>
+      <li class="required">
+        <%= f.label :who %>
+        <%= f.text_field :who  %>
+      </li>
+      <li class="required">
+        <%= f.label :price %>
+        <%= f.number_field :price, size: 6 %>
+      </li>
+      <li class="required">
+        <%= f.label :extra %>
+        <%= f.text_field :extra  %>
+      </li>
+      <li class="required">
+        <%= f.label :start_time, 'Start Date' %>
+        <%= f.date_select :start_time %>
+      </li>
+      <li class="required">
+        <%= f.label :start_time %>
+        <%= f.time_select :start_time, :ignore_date => true, :ampm => true %>
+      </li>
+      <li class="required">
+        <%= f.label :end_time, 'End Date' %>
+        <%= f.date_select :end_time %>
+      </li>
+      <li class="required">
+        <%= f.label :end_time %>
+        <%= f.time_select :end_time, :ignore_date => true, :ampm => true %>
+      </li>
+      <li class="required">
+        <%= f.label :link %>
+        <%= f.text_field :link %>
+      </li>
+      <li class="required">
+        <%= f.label :special %>
+        <%= f.check_box :special %>
+      </li>
+    </ol>
+    <p>
+      <%= f.submit %>
+      <%= link_to "Cancel", events_path, class: 'button' %>
+    </p>
+  </fieldset>
 <% end %>

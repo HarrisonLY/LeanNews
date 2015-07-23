@@ -1,27 +1,30 @@
-<%= render 'header' %>
+<div style="height: 150px; background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.59)) , url(assets/about-7b58b79edfb0231e6812ba29e16f15315fe4828606dc5df845d12eca47ddfa63.jpg);background-size: cover;">
 
-<div style="min-height: 500px;padding-top: 60px;">
+<div class="container" style="padding-top: 50px; padding-left: 20px; padding-right: 20px;">
 
-<span id="notice"><%= notice %></span>
+<h1 style="text-align: center; font-size: 30px; font-family: Ubuntu; font-weight: bold; color: white;"> <%= @event.title %> </h1> 
+
+</div> 
+</div>
+
+<div style="min-height: 300px;padding-top: 60px;">
+
+<p id="notice"><%= notice %></p>
 
 
-  Title: <%= @event.title %>
+
+  Location: <%= @event.address %>
   <br>
-  Location: <%= @event.location %>
+  Start Time: <%= @event.start_time.strftime("%I:%M %p %Z") %>
   <br>
-  Date: <%= @event.date %>
+  End Time: <%= @event.end_time.strftime("%I:%M %p %Z") %>
   <br>
-  Start Time: <%= @event.start_time %>
-  <br>
-  End Time: <%= @event.end_time %>
-  <br>
-  Price: <%= @event.price %>
+  Price: <%= format_price(@event) %>
   <br>
   Who: <%= @event.who %>
 
   <br>
   <br>
-
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
