@@ -1,3 +1,7 @@
+ <%
+=begin %>
+
+
 <%= simple_form_for(@event) do |f| %>
   <%= f.error_notification %>
   <fieldset>
@@ -23,12 +27,12 @@
         <%= f.text_field :city, size: 30 %>
       </li>
       <li class="required">
-        <%= f.label :who %>
-        <%= f.text_field :who  %>
-      </li>
-      <li class="required">
         <%= f.label :price %>
         <%= f.number_field :price, size: 6 %>
+      </li>
+      <li class="required">
+        <%= f.label :who %>
+        <%= f.text_field :who  %>
       </li>
       <li class="required">
         <%= f.label :extra %>
@@ -64,4 +68,40 @@
       <%= link_to "Cancel", events_path, class: 'button' %>
     </p>
   </fieldset>
+<% end %>
+
+ <%
+=end %>
+
+<%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+
+  <div >
+    <h1 style="text-align: center"> General Info </h1>
+    <%= f.input :title %>
+    <%= f.input :who %>
+    <%= f.input :extra %>
+    <%= f.input :price %>
+    <%= f.input :link %>
+    <%= f.input :special %>
+  </div>
+
+  <div  >
+    <h1 style="text-align: center"> Date & Time </h1>
+    <%= f.input :start,  {ampm: true} %>
+    <%= f.input :end,  {ampm: true} %>
+  </div>
+
+  <div >
+    <h1 style="text-align: center"> Location </h1>
+    <%= f.input :country, default: [ "United States" ], collection: [ "United States"]  %>
+    <%= f.input :state, default: [ "New York" ], collection: (us_states)  %>
+    <%= f.input :city, default: [ "New York" ], collection: [ "New York", "Brooklyn", "Queens", "San Francisco", "Los Angelos"]  %>
+    <%= f.input :address %>
+  </div> 
+
+  <div class="form-actions" style="text-align: center">
+   <%= f.button :submit, :class => 'btn btn-success btn-md' %>
+   <%= link_to 'Cancel', admin_event_path, :class => 'btn btn-danger btn-md' %>
+  </div>
 <% end %>

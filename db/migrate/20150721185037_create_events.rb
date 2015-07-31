@@ -7,10 +7,12 @@ class CreateEvents < ActiveRecord::Migration
       t.string :state
       t.string :city
       t.string :link
-      t.datetime :start_time
-      t.datetime :end_time
+      t.datetime :start
+      t.datetime :end   
       t.decimal :price
       t.text :who
+      t.text :extra
+      t.boolean :special, default: false
 
       t.timestamps null: false
     end
