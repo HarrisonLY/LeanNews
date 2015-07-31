@@ -11,15 +11,12 @@
 
 <p id="notice"><%= notice %></p>
 
-<h3 style= "text-align: center; width: 100%; border-bottom: 1px solid #000; line-height: 0.1em; margin: 50px 0 40px;"> <span style="background:#fff; padding: 0 35px; "> <%= Date.current.strftime("%B %d, %Y") %> </span></h3> 
 
-
-
-<table style="margin: 20px auto; max-width: 600px;">
+<table class="col-lg-8 col-md-8" style="margin: 20px auto; max-width: 600px;">
     <tbody>
   <% @events_am.each do |event| %>
         <tr> 
-          <td> <a style="color: #FB9727; font-size: 20px; font-family: avenir; font-weight: 700; padding-right: 20px;" href="<%= event.link %>"> <%= event.title %> </a>  
+          <td> <a style="color: #FB9727; font-size: 20px; font-family: avenir; font-weight: 700; padding-right: 20px;" href="<%= event.link %>" target="_blank"> <%= event.title %> </a>  
           </td> 
          <td style=" background-color: #EAEAEA; font-size: 16px; font-family: ubuntu; text-align: center; border-radius: 4px; font-weight: 700; padding: 5px 10px; border: 5px solid #F7F7F7;"> <%= format_price(event) %> </td> 
         </tr>
@@ -28,5 +25,11 @@
     <% end %>
   </tbody>
 </table>
+
+<div class="col-lg-4 col-md-4" style="margin: 20px auto; border-left: 1px solid black">
+
+asd
+
+</div>
 
 </div>
