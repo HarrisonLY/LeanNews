@@ -73,19 +73,21 @@
  <%
 =end %>
 
+ <%
+=begin %>
+
+
 <%= simple_form_for(@event) do |f| %>
   <%= f.error_notification %>
 
   <div >
     <h1 style="text-align: center"> General Info </h1>
     <%= f.input :title %>
-  <%
-=begin %>
+
     <%= f.input :who %>
     <%= f.input :extra %>
     <%= f.input :special %>
- <%
-=end %>
+
 
     <%= f.input :price %>
     <%= f.input :link %>
@@ -102,6 +104,69 @@
     <%= f.input :country, default: [ "United States" ], collection: [ "United States"]  %>
     <%= f.input :state, collection: (us_states),default: [ "New York" ]  %>
     <%= f.input :city, default: [ "New York" ], collection: [ "New York", "Brooklyn", "Queens", "San Francisco", "Los Angelos"]  %>
+    <%= f.input :place %> 
+    <%= f.input :address %>
+  </div> 
+
+  <div class="form-actions" style="text-align: center">
+   <%= f.button :submit, :class => 'btn btn-success btn-md' %>
+   <%= link_to 'Cancel', admin_event_path, :class => 'btn btn-danger btn-md' %>
+  </div>
+<% end %>
+
+
+ <%
+=end %>
+
+
+
+<%= simple_form_for(@event) do |f| %>
+  <%= f.error_notification %>
+
+  <div>
+  <fieldset>
+    <h1> General Info </h1>
+    <ol>
+      <li class="required">
+        <%= f.label :title, 'Event Name' %>
+        <%= f.text_field :title, autofocus: true %>
+      </li>
+      <li>
+        <%= f.label :price %>
+        <%= f.text_field :price %>
+      </li>
+      <li class="required">
+        <%= f.label :link %>
+        <%= f.text_field :link %>
+      </li>
+    </ol>
+
+    <h1> Date & Time </h1>
+    <ol>
+      <li class="required">
+        <%= f.label :start, 'Start Date' %>
+        <%= f.date_select :start %>
+      </li>
+      <li class="required">
+        <%= f.label :end, 'End Date' %>
+        <%= f.date_select :end %>
+      </li>
+      <li class="required">
+        <%= f.label :start, 'Start Time' %>
+        <%= f.time_select :start, :ignore_date => true, :ampm => true %>
+      </li>
+      <li class="required">
+        <%= f.label :end, 'End Time' %>
+        <%= f.time_select :end, :ignore_date => true, :ampm => true %>
+      </li>
+    </ol>
+  </div>
+
+  <div >
+    <h1> Location </h1>
+    <%= f.input :country, default: [ "United States" ], collection: [ "United States"]  %>
+    <%= f.input :state, collection: (us_states),default: [ "New York" ]  %>
+    <%= f.input :city, default: [ "New York" ], collection: [ "New York", "Brooklyn", "Queens"]  %>
     <%= f.input :place %> 
     <%= f.input :address %>
   </div> 
