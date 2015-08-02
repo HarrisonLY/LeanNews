@@ -22,6 +22,7 @@ def events_pm(event)
 
 def us_states
     [
+      ['New York', 'NY'],
       ['Alabama', 'AL'],
       ['Alaska', 'AK'],
       ['Arizona', 'AZ'],

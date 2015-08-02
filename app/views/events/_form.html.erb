@@ -79,11 +79,16 @@
   <div >
     <h1 style="text-align: center"> General Info </h1>
     <%= f.input :title %>
+  <%
+=begin %>
     <%= f.input :who %>
     <%= f.input :extra %>
+    <%= f.input :special %>
+ <%
+=end %>
+
     <%= f.input :price %>
     <%= f.input :link %>
-    <%= f.input :special %>
   </div>
 
   <div  >
@@ -95,7 +100,7 @@
   <div >
     <h1 style="text-align: center"> Location </h1>
     <%= f.input :country, default: [ "United States" ], collection: [ "United States"]  %>
-    <%= f.input :state, default: [ "New York" ], collection: (us_states)  %>
+    <%= f.input :state, collection: (us_states),default: [ "New York" ]  %>
     <%= f.input :city, default: [ "New York" ], collection: [ "New York", "Brooklyn", "Queens", "San Francisco", "Los Angelos"]  %>
     <%= f.input :place %> 
     <%= f.input :address %>
