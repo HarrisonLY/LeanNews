@@ -62,7 +62,7 @@
         </tr>
 
         <tr style="font-size: 12px; font-weight: 600; font-family: Lora;"> <td style="padding: 0px 0px 4px 110px;"> <%= event.start.strftime('%A, %l:%M %P') %> - <%= event.end.strftime('%l:%M %P') %> </td> </tr>
-        <tr style="font-size: 12px; font-weight: 600; font-family: Lora;"> <td style="padding: 0px 0px 40px 110px;"><%= event.city %>, <%= event.state %> <% if event.place? %> <span style="color: grey;font-size: 12px;"> • </span> <%= event.place %> <% end %> <span style="color: grey;font-size: 12px;"> • </span> <%= event.address %> </td> </tr>
+        <tr style="font-size: 12px; font-weight: 600; font-family: Lora;"> <td style="padding: 0px 0px 40px 110px;"><%= event.city %>, <%= event.state %> <% if event.place? %> <span style="color: grey;font-size: 12px;"> · </span> <%= event.place %> <% end %> <span style="color: grey;font-size: 12px;"> · </span> <%= event.address %> </td> </tr>
     <% end %>
   </tbody>
 </table>
