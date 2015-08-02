@@ -52,17 +52,17 @@
     <tbody>
   <% @events.each do |event| %> 
         <tr> 
-          <td style="position: absolute; height: 90px; width: 90px; background-color: white; color: #FB9727; text-align: center; padding-top: 16px; font-size: 12px; border-radius: 6px; border: 1px solid #EBEBEB"> <%= event.start.strftime('%A') %> <div style="font-size: 26px; color:black"><%= event.start.strftime('%d') %> </div>
+          <td style="position: absolute; height: 80px; width: 80px; background-color: white; color: #FB9727; text-align: center; padding-top: 16px; font-size: 12px; border-radius: 6px; border: 1px solid #EBEBEB; font-family: Lora;"> <%= event.start.strftime('%b') %> <div style="font-size: 26px; color:black"><%= event.start.strftime('%d') %> </div>
           </td>
         </tr>
         <tr> 
-          <td style="padding-left: 110px;"> <a style="color: #FB9727; font-size: 20px; font-family: avenir; font-weight: 700; padding-right: 20px;" href="<%= event.link %>" target="_blank"> <%= event.title %> </a>  
+          <td style="padding-left: 110px;"> <a style="color: #FB9727; font-size: 20px; font-family: Lora; font-weight: 700; padding-right: 20px;" href="<%= event.link %>" target="_blank"> <%= event.title %> </a>  
           </td>
-          <td style=" font-size: 16px; font-family: ubuntu; text-align: center; border-radius: 4px; font-weight: 700; padding: 5px 10px;"> <%= format_price(event) %> </td>  
+          <td style=" font-size: 16px; font-family: Lora; text-align: center; border-radius: 4px; font-weight: 700; padding: 5px 10px;"> <%= format_price(event) %> </td>  
         </tr>
 
-        <tr style="font-size: 14px; font-weight: 700;"> <td style="padding: 0px 0px 4px 110px;"> <%= event.start.strftime('%B %d, %l:%M %P') %> - <%= event.end.strftime('%l:%M %P') %> </td> </tr>
-        <tr style="font-style: oblique; font-size: 14px;"> <td style="padding: 0px 0px 40px 110px;"><%= event.city %>, <%= event.state %> <% if event.place? %> <span style="color: grey;font-size: 12px;"> • </span> <%= event.place %> <% end %> <span style="color: grey;font-size: 12px;"> • </span> <%= event.address %> </td> </tr>
+        <tr style="font-size: 12px; font-weight: 600; font-family: Lora;"> <td style="padding: 0px 0px 4px 110px;"> <%= event.start.strftime('%A, %l:%M %P') %> - <%= event.end.strftime('%l:%M %P') %> </td> </tr>
+        <tr style="font-size: 12px; font-weight: 600; font-family: Lora;"> <td style="padding: 0px 0px 40px 110px;"><%= event.city %>, <%= event.state %> <% if event.place? %> <span style="color: grey;font-size: 12px;"> • </span> <%= event.place %> <% end %> <span style="color: grey;font-size: 12px;"> • </span> <%= event.address %> </td> </tr>
     <% end %>
   </tbody>
 </table>

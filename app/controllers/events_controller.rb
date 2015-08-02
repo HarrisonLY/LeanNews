@@ -1,12 +1,12 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :require_signin, except: [:index]
+  before_action :require_admin, except: [:index]
 
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
-
-
+    @events = Event.where("start >= ?", DateTime.current).order("start asc").order(:title)
 
   end
 
@@ -63,7 +63,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Event was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
