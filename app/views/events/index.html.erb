@@ -51,10 +51,7 @@
 <table class="" style="margin: 20px auto; max-width: 600px; font-family: open sans;">
     <tbody>
   <% @events.each do |event| %> 
-        <tr> 
-          <td style="position: absolute; height: 80px; width: 80px; background-color: white; color: #FB9727; text-align: center; padding-top: 16px; font-size: 12px; border-radius: 6px; border: 1px solid #EBEBEB;"> <%= event.start.strftime('%b') %> <div style="font-size: 26px; color:black"><%= event.start.strftime('%d') %> </div>
-          </td>
-        </tr>
+
         <tr> 
           <td> <a style="color: #FB9727; font-size: 20px; font-weight: 700;" href="<%= event.link %>" target="_blank"> <%= event.title %> </a>  
           </td>
