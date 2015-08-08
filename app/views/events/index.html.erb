@@ -54,15 +54,15 @@
     <tbody>
   <% @events.each do |event| %> 
          <tr>
-         <th rowspan="4" style="text-align: center;"> <div style="color: #FB9727; font-size: 12px; width: 90px">  <%= event.start.strftime('%b') %> </div>  <div style="font-size: 26px; color:black; width: 90px"> <%= event.start.strftime('%d') %>  </div>
+         <th rowspan="4" style="text-align: center;">  <div style="color: #FB9727; font-size: 11px; width: 90px">  <%= event.start.strftime('%b') %> </div>  <div style="font-size: 24px; color:black; width: 90px"> <%= event.start.strftime('%d') %>  </div>
           </th>
         </tr>
         <tr> 
-          <td> <a style="color: #FB9727; font-size: 20px; font-weight: 700; " href="<%= event.link %>" target="_blank"> <%= event.title %> </a>  
+          <td> <a style="color: #FB9727; font-size: 16px; font-weight: 700; " href="<%= event.link %>" target="_blank"> <%= event.title %> </a>  
           </td>
           <td style=" font-size: 16px; text-align: center; border-radius: 4px; font-weight: 700; padding: 5px 10px;"> <%= format_price(event) %> </td>  
         </tr>
-        <tr style="font-size: 12px;"> <td style="padding: 0px 0px 4px 0px;"> <%= event.start.strftime('%A, %l:%M %P') %> - <%= event.end.strftime('%l:%M %P') %> </td> </tr>
+        <tr style="font-size: 12px;"> <td style="padding: 0px 0px 0px 0px;"> <%= event.start.strftime('%A, %l:%M %P') %> - <%= event.end.strftime('%l:%M %P') %> </td> </tr>
         <tr style="font-size: 12px;"> <td><%= event.city %>, <%= event.state %> <% if event.place? %> <span style="color: grey;font-size: 12px;"> · </span> <%= event.place %> <% end %> <span style="color: grey;font-size: 12px;"> · </span> <%= event.address %> </td> </tr>
         <td style="padding-bottom:40px"></td>        
     <% end %>
