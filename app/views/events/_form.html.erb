@@ -126,20 +126,9 @@
   <div>
   <fieldset>
     <h1> General Info </h1>
-    <ol>
-      <li class="required">
-        <%= f.label :title, 'Event Name' %>
-        <%= f.text_field :title, autofocus: true %>
-      </li>
-      <li>
-        <%= f.label :price %>
-        <%= f.text_field :price %>
-      </li>
-      <li class="required">
-        <%= f.label :link %>
-        <%= f.text_field :link %>
-      </li>
-    </ol>
+    <%= f.input :title, autofocus: true %>
+    <%= f.input :price %>
+    <%= f.input :link %>
 
     <h1> Date & Time </h1>
     <ol>
