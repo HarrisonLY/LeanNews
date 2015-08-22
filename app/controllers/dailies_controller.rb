@@ -2,6 +2,7 @@ class DailiesController < ApplicationController
   before_action :set_daily, only: [:show, :edit, :update, :destroy]
   before_action :require_signin, except: [:index, :show]
   before_action :require_admin, except: [:index, :show]
+  before_filter :disable_nav, only: [:index, :show]
 
   # GET /dailies
   # GET /dailies.json
@@ -80,5 +81,9 @@ class DailiesController < ApplicationController
     def daily_params
       params.require(:daily).permit(:title, :content, :created_at, :updated_at, :slug)
     end
+
+def disable_nav
+  @disable_nav = true
+end
 
 end

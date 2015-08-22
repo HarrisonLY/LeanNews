@@ -71,7 +71,7 @@
         <tr style="font-size: 12px;"> <td><%= event.city %>, <%= event.state %> <% if event.place? %> <span style="color: grey;font-size: 12px;"> · </span> <%= event.place %> <% end %> <span style="color: grey;font-size: 12px;"> · </span> <%= event.address %> </td> </tr>
           <% if event.extra? %>
         <tr> 
-          <td> <%= event.extra %> </td>
+          <td style="font-size: 12px;"> <%= event.extra %> </td>
         </tr>
           <% end %> 
         <td style="padding-bottom:40px"></td>        

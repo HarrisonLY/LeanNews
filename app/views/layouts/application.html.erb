@@ -32,12 +32,11 @@
 
 <body>
 
-<%= render "layouts/header" %>
-  
+<%= render 'layouts/header' unless @disable_nav %>
+
   <div id="container">
 
 <%= yield %>
-
 
 	<%= render "layouts/footer" %>
 
