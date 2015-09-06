@@ -16,6 +16,9 @@ end
 def admin
 end
 
+def golden
+end
+
 
 end
 

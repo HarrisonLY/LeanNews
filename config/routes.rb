@@ -8,6 +8,7 @@ Rails.application.routes.draw do
  get "press" => 'welcome#press'
  get "contact" => 'welcome#contact'
  get "admin" => 'welcome#admin'
+ get "golden" => 'welcome#golden'
 
  match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
 

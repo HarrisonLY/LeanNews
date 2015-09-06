@@ -1,0 +1,66 @@
+<% if current_user_admin? %>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: transparent; border: none; position: absolute; style="z-index: 1;"">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        <img alt="LeanNews" src="/assets/gold_white_logo-ab55698d5f0b4d8d8ca85ca0f16c45e467d79dd90c404d267eb902a6df47761a.png" style="max-height: 40px; margin-top: -9px">
+      </a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style=" color: white; font-weight: 500; font-family: lora;">Admin Menu <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+        <li><a href="/admin">Admin</a></li>
+        <li><a href="/admin-daily">Daily Admin</a></li>
+        <li><a href="/admin-event">Event Admin</a></li>
+        <li><a href="/users">Users</a></li>
+        <li> <%= link_to 'Sign Out', session_path, method: :delete %> </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<% else %>
+
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color: transparent; border: none; position: absolute; style="z-index: 1;"">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <img alt="LeanNews" src="/assets/gold_white_logo-ab55698d5f0b4d8d8ca85ca0f16c45e467d79dd90c404d267eb902a6df47761a.png" style="max-height: 40px; margin-top: -9px">
+      </a>
+    </div>
+  </div>
+</nav>
+
+<% end %>
+
+
+<div style="height: 500px; background: url('assets/gold_dust-b883620aa16b66ff16eea43e337e3278df34a80990257ab36daa376dcdbaf64c.jpg');   background-size: cover; };">
+
+<div class="container" style="padding-top: 100px; padding-left: 20px; padding-right: 20px;">
+
+<p style="text-align: center; font-size: 40px; font-family: Ubuntu; font-weight: bold; color: white;">The Golden Newsletter</p>
+
+<span>
+
+
+
+</span>
+
+</div>
+</div>
+
+<div style="background-color: black ;padding: 20px;">
+
+		<img src="http://i.imgur.com/vzIcYV9.gif" alt="I LOOOOOOOOVVVVVVEEEE GOOLLLDDD" style="width: 100%; height: auto;">
+
+</div>
