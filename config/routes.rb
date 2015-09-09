@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :blogs
  root 'welcome#index'
  post 'welcome/subscribe' => 'welcome#subscribe'
 
