@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
 
-  resources :blogs
  root 'welcome#index'
  post 'welcome/subscribe' => 'welcome#subscribe'
 
@@ -15,6 +14,9 @@ Rails.application.routes.draw do
 
  resources :dailies, path: '/daily'
  get "admin-daily" => 'dailies#admin'
+
+ resources :blogs, path: '/blog'
+ get "admin-blog" => 'blogs#admin'
 
  resources :events
  get "admin-event" => 'events#admin'

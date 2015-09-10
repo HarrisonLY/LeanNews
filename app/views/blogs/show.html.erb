@@ -1,4 +1,26 @@
+<div style="min-height: 500px;">
+
 <p id="notice"><%= notice %></p>
+
+
+  <%= @blog.content.html_safe %>
+
 
 <%= link_to 'Edit', edit_blog_path(@blog) %> |
 <%= link_to 'Back', blogs_path %>
+
+
+<span style="left: 0; position: absolute;margin-left: 40px;">
+<%= link_to("← Newer News", @blog.next_post) if @blog.next_post %>
+</span>
+
+
+<span style="right: 0; position: absolute;margin-right: 40px;">
+<%= link_to("Older News →", @blog.previous_post) if @blog.previous_post %>
+</span>
+
+
+<br>
+<br>
+
+</div>

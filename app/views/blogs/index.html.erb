@@ -1,25 +1,12 @@
-<p id="notice"><%= notice %></p>
+<div style="min-height: 500px;">
 
-<h1>Listing Blogs</h1>
+  <%= @recent.content.html_safe if @recent %>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+</div>
 
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<span style="right: 0; position: absolute;margin-right: 40px;">
+<%= link_to("Older News →", @second) if @second %>
+</span>
 
 <br>
-
-<%= link_to 'New Blog', new_blog_path %>
+<br>
