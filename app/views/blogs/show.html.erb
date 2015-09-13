@@ -1,16 +1,36 @@
-<div style="height: 200px; background: linear-gradient(rgba(25, 25, 25, 0.71), rgba(0, 0, 0, 0.58)), url('assets/contact-83dde3aa3b1f525163d438a01772c1bbd7ddc8712a6304ac995133664fbf88de.jpg');   background-size: cover; };">
+<div style="height:300px; background: linear-gradient(rgba(25, 25, 25, 0.71), rgba(0, 0, 0, 0.58)), url('assets/nytm-e168418c3c3aa8f7e0a08df5d2d42a3b741166f1cf3b9ee18a55ba89a4f20bb6.jpg');   background-size: cover; };">
 
+<div class="container" style="padding-top: 80px; padding-left: 20px; padding-right: 20px;">
+
+<p style="text-align: center; font-size: 40px; font-family: Ubuntu; font-weight: bold; color: white;">The Inaugural LeanNews NYTM</p>
+</div>
 </div>
 
 
 <div style="min-height: 500px;">
 
-  <%= @recent.content.html_safe if @recent %>
+  <%= @blog.content.html_safe %>
+
+</div>
+
+<div style="margin-bottom: 20px; margin-top: 20px;width: 90%;left: 0;right: 0;margin-left: auto;margin-right: auto;">
+<div style=" text-align: center;">
+
+<h2 style="padding-bottom: 15px;    font-family: Ubuntu;text-align: center;"> Startup & Tech News Delivered To Your Inbox Daily. </h2>
 
 
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<form class="form-group" id="subscribe" action="/welcome/subscribe" accept-charset="UTF-8" method="post" style="margin: auto; left: 0; right: 0; max-width: 300px;">
+   <input name="utf8" type="hidden" value="✓">
+   <input type="hidden" name="authenticity_token" value="qtyhqjj7amlOtHD6+i9xpDmNuXEEzPJr+QDIxuncHZZl8DCIhRNUVT9EWlAfpanw4AWr+GhE8POY4POmwvy5EQ=="> 
+   <div class="input-group">
+    <input class="form-control" id="email" placeholder="Email Address" type="email" name="email[address]" style="height: 40px; border: 1px solid rgb(255, 167, 22);font-family: Lora; width: 250px;" required="">
+   <span class="input-group-btn">
+    <input class="btn btn-custom btn-md btn-block" type="submit" style="background-color: rgb(255, 167, 22); color: white; height: 40px; font-family: lora;" value="Join">
+   </span>
+  </div>
+</form>
 
+    </div>
 </div>
 
 
