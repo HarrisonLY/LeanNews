@@ -20,7 +20,7 @@
 <div class="container">
   <h2>LeanBlogs <%= link_to 'New Post', new_blog_path, :class => 'btn btn-success btn-sm' %> </h2>          
   <table class="table">
-    <thead>
+    <tbody>
     <% @blogs.each do |blog| %>
       <tr>
         <td><%= link_to blog.title, blog %></td>

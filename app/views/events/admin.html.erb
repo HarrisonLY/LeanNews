@@ -20,7 +20,7 @@
 <div class="container">
   <h2>LeanEvents <%= link_to 'New Post', new_event_path, :class => 'btn btn-success btn-sm' %> </h2>       
   <table class="table">
-    <thead>
+    <tbody>
     <% @events.each do |event| %>
       <tr>
         <td><%= link_to event.title, event %></td>
