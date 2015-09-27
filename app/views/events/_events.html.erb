@@ -1,0 +1,45 @@
+<table class="events_table">
+  <tbody>
+    <% @events.each do |event| %> 
+
+      <tr> 
+        <% if event.extra? %>
+          <th rowspan="5" class="center_text">
+        <% else %> 
+          <th rowspan="4" class="center_text">
+        <% end %> 
+          <div class="event_month"> <%= event.start.strftime('%b') %> </div>  
+          <div class="event_day"> <%= event.start.strftime('%d') %> </div>
+          </th>
+      </tr>
+
+      <tr> 
+        <td> <a class="event_title" href="<%= event.link %>" target="_blank"> <%= event.title %> </a> </td>
+        <td class="event_price"> <%= format_price(event) %> </td>  
+      </tr>
+
+      <tr> 
+        <td class="event_time"> <%= event.start.strftime('%A, %l:%M %P') %> - <%= event.end.strftime('%l:%M %P') %> </td> 
+      </tr>
+
+      <tr class="font_12px"> 
+        <td> <%= event.city %>, <%= event.state %> <% if event.place? %> <span class"dot_color"> · </span> <%= event.place %> <% end %> <span class"dot_color"> · </span> <%= event.address %> </td>
+      </tr>
+
+    <% if event.extra? %>
+      <tr> 
+        <td class="font_12px"> <%= event.extra %> </td>
+      </tr>
+    <% end %> 
+
+    <% if current_user_admin? %>
+      <tr> 
+        <td><%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-warning btn-sm' %></td>
+        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
+      </tr>
+    <% end %>
+
+        <td style="padding-bottom:40px"></td>
+    <% end %>
+  </tbody>
+</table>
