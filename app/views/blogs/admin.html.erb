@@ -1,36 +1,36 @@
-<div style="height: 150px; background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.59)) , url(assets/about-7b58b79edfb0231e6812ba29e16f15315fe4828606dc5df845d12eca47ddfa63.jpg);background-size: cover;">
+<title> LeanNews Blog Admin Panel </title>
 
-<div class="container" style="padding-top: 50px; padding-left: 20px; padding-right: 20px;">
+<!-- Header Image & Text -->
 
-<p style="text-align: center; font-size: 30px; font-family: Ubuntu; font-weight: bold; color: white;">LeanBlogs </p> 
-
-<p style="text-align: center; font-size: 15px; font-family: Ubuntu; font-weight: bold; color: white;margin-top: -10px"> Admin Panel </p>
-
-</div>
-</div>
-
-<div style="min-height: 300px;">
-
-<div id="notice"><%= notice %></div>
-
-<div style="text-align: center">
-  <%= will_paginate @blogs %>
+<div class="header_image"> 
+  <div class="header_container">
+    <p class="header_text"> LeanBlog </p> 
+    <p class="header_subtext"> Admin Panel </p>
+  </div>
 </div>
 
-<div class="container">
-  <h2>LeanBlogs <%= link_to 'New Post', new_blog_path, :class => 'btn btn-success btn-sm' %> </h2>          
-  <table class="table">
-    <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= link_to blog.title, blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog), :class => 'btn btn-warning btn-sm' %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-</div>
-  
-</div>
+<!-- LeanBlog Post Table -->
+
+<div class="leantable">
+<div id="notice"><%= notice %> </div>
+
+  <div class="center_text">
+    <%= will_paginate @blogs %>
+  </div>
+
+  <div class="container">
+    <h2> LeanBlogs <%= link_to 'New Post', new_blog_path, :class => 'btn btn-success btn-sm' %> </h2>  
+      <table class="table">
+        <tbody>
+          <% @blogs.each do |blog| %>
+            <tr>
+              <td><%= link_to blog.title, blog %></td>
+              <td><%= link_to 'Edit', edit_blog_path(blog), :class => 'btn btn-warning btn-sm' %></td>
+              <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
+            </tr>
+         <% end %>
+        </tbody>
+     </table>
+  </div> 
+
 </div>

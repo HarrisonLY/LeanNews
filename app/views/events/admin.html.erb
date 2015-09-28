@@ -1,4 +1,4 @@
-<title> LeanNews Events Admin Panel </title>
+<title> LeanNews Event Admin Panel </title>
 
 <!-- Header Image & Text -->
 
@@ -24,10 +24,10 @@
         <tbody>
           <% @events.each do |event| %>
             <tr>
-             <td><%= link_to event.title, event %></td>
-             <td><%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-warning btn-sm' %></td>
-             <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
-           </tr>
+              <td><%= link_to event.title, event %></td>
+              <td><%= link_to 'Edit', edit_event_path(event), :class => 'btn btn-warning btn-sm' %></td>
+              <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
+            </tr>
          <% end %>
         </tbody>
      </table>
