@@ -1,14 +1,18 @@
+<title> LeanNews Navbar </title>
+
+<!-- Admin Navbar -->
+
 <% if current_user_admin? %>
-<nav class="navbar navbar-default navbar-fixed-top" style="background-color: transparent; border: none; position: absolute; style="z-index: 1;"">
+<nav class="navbar navbar-default navbar-fixed-top lean_navbar">
   <div class="container-fluid">
     <div class="navbar-header">
-    	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="/">
-        <img alt="LeanNews" src="/assets/LeanNews_Horizontal_White_Orange-be273cd97fe785832052c92bb00a190bf18721fbee095197a1dbd176e15ddaab.png" style="max-height: 40px; margin-top: -9px">
+        <img class="leannews_navbar_logo" alt="LeanNews" src="/assets/LeanNews_Horizontal_White_Orange-be273cd97fe785832052c92bb00a190bf18721fbee095197a1dbd176e15ddaab.png">
       </a>
     </div>
     <div class="collapse navbar-collapse">
@@ -26,17 +30,21 @@
         </li>
       </ul>
 
-    </div><!--/.nav-collapse -->
+    </div> <!--/.nav-collapse -->
   </div>
 </nav>
 
+
+<!-- Default Navbar -->
+
+
 <% else %>
 
-<nav class="navbar navbar-default navbar-fixed-top" style="background-color: transparent; border: none; position: absolute; style="z-index: 1;"">
+<nav class="navbar navbar-default navbar-fixed-top lean_navbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
-        <img alt="LeanNews" src="/assets/LeanNews_Horizontal_White_Orange-be273cd97fe785832052c92bb00a190bf18721fbee095197a1dbd176e15ddaab.png" style="max-height: 40px; margin-top: -9px">
+        <img class="leannews_navbar_logo" alt="LeanNews" src="/assets/LeanNews_Horizontal_White_Orange-be273cd97fe785832052c92bb00a190bf18721fbee095197a1dbd176e15ddaab.png">
       </a>
     </div>
   </div>

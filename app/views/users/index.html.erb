@@ -1,17 +1,19 @@
-<div style="height: 150px; background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.59)) , url(assets/about-7b58b79edfb0231e6812ba29e16f15315fe4828606dc5df845d12eca47ddfa63.jpg);background-size: cover;">
+<title> LeanNews Users </title>
 
-<div class="container" style="padding-top: 60px; padding-left: 20px; padding-right: 20px;">
+<!-- Header Image & Text -->
 
-<p style="text-align: center; font-size: 30px; font-family: Ubuntu; font-weight: bold; color: white;"><%= pluralize(@users.size, 'User') %> </p>
-
+<div class="header_image">
+    <div class="header_container">
+        <p class="header_text"> <%= pluralize(@users.size, 'User') %> </p> 
+    </div>
 </div>
-</div>
 
-<div style="min-height: 250px; margin: 20px 5%">
+<!-- User Table -->
 
-<div id="notice"><%= notice %></div>
+<div class="leantable">
+<div id="notice"><%= notice %> </div>
 
-  <%= will_paginate @users %>
+<%= will_paginate @users %>
 
 <table class="table table-striped table-bordered" cellspacing="0" width="100%">
     <thead>
