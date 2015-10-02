@@ -31,7 +31,7 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
   end
   @events.each do |event|
     xml.url {
-      xml.loc("#{event_url(event)}")
+      xml.loc("https://www.leannews.com/events")
       xml.lastmod event.updated_at.strftime("%F")
       xml.changefreq("weekly")
       xml.priority(0.5)
