@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
-
  root 'welcome#index'
+
+ resources :sitemaps, :only => :index
+ get "sitemap.xml" => "sitemaps#index", :format => "xml", :as => :sitemap
+
  post 'welcome/subscribe' => 'welcome#subscribe'
 
  get "about" => 'welcome#about'
