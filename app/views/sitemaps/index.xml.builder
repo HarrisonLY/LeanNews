@@ -7,6 +7,21 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
       xml.priority(1.0)
   }
   xml.url{
+      xml.loc("https://www.leannews.com/about")
+      xml.changefreq("weekly")
+      xml.priority(0.9)
+  }
+  xml.url{
+      xml.loc("https://www.leannews.com/contact")
+      xml.changefreq("weekly")
+      xml.priority(0.9)
+  }
+  xml.url{
+      xml.loc("https://www.leannews.com/press")
+      xml.changefreq("weekly")
+      xml.priority(0.9)
+  }
+  xml.url{
       xml.loc("https://www.leannews.com/daily")
       xml.changefreq("daily")
       xml.priority(0.9)
