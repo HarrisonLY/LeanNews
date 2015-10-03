@@ -5,29 +5,34 @@
 
 <head>
 
-  <title><%= yield(:title) %></title>
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-  <script src="//cdn.optimizely.com/js/3175510977.js"></script>
-  <script src="//load.sumome.com/" data-sumo-site-id="50623c9e59cdec81ba33b31a0c9e9b13d31eafd3ee5c2505cd9c623c429b1f7e" async="async"></script>
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-  <%= favicon_link_tag 'favicon.png' %>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<title><%= yield(:title) %></title>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="//cdn.optimizely.com/js/3175510977.js"></script>
+<script src="//load.sumome.com/" data-sumo-site-id="50623c9e59cdec81ba33b31a0c9e9b13d31eafd3ee5c2505cd9c623c429b1f7e" async="async"></script>
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
+<%= favicon_link_tag 'favicon.png' %>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="_ETPrgzY4Omv-tkfCASePwxM7Ok3-xrQO1ILw9oWlrk" />
-
 <meta property="og:title" content="LeanNews: Tech & Startup News Summarized in 60 seconds" />
 <meta property="og:site_name" content="LeanNews"/>
 <meta property="og:url" content="www.leannews.com" />
 <meta property="og:description" content="Keep up to date on trending tech and startup news, stay on top of local tech events, uncover cool new products/companies, and follow funding, exits and acquisitions." />
 <meta property="og:image" content="https://lh4.googleusercontent.com/-CVPpi6i4Hq0/Vcapkz221lI/AAAAAAAAABU/VnXSph3qcRM/w1599-h840-no/LN_FB.jpg"/> 
-<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
 </head>
 
 <body>
