@@ -11,7 +11,11 @@ Rails.application.routes.draw do
  get "press" => 'welcome#press'
  get "contact" => 'welcome#contact'
  get "admin" => 'welcome#admin'
+
+ get "test" => 'welcome#test'
+ get "contest" => 'welcome#contest'
  get "golden" => 'welcome#golden'
+ get "share" => 'welcome#share'
 
  match "/404" => "errors#error404", via: [ :get, :post, :patch, :delete ]
 

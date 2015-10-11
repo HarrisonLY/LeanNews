@@ -1,6 +1,6 @@
 class WelcomeController < ApplicationController
 skip_before_action :verify_authenticity_token
-before_action :require_admin, only: [:admin]
+before_action :require_admin, only: [:admin, :share, :golden, :contest, :test]
 before_filter :disable_nav, only: [:golden]
 
 def subscribe(optin = false)
