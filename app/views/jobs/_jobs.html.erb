@@ -1,0 +1,45 @@
+<table class="jobs_table ">
+  <% @jobs.each do |job| %> 
+
+    <tbody class="jobs_body col-md-6 col-sm-12 clickable-row" data-href="<%= job.link %>"> 
+      <tr> 
+        <td> <a class="job_title" href="<%= job.link %>" target="_blank"> <%= job.title %> </a> </td> 
+      </tr>
+
+ <%
+=begin %>
+
+      <tr> 
+        <td class="job_type"> <%= job.job_type %> </td>  
+      </tr>
+
+ <%
+=end %>
+
+      <tr> 
+        <td class="job_company"> <%= job.company %> </td>
+      </tr>
+      <tr> 
+        <td class="job_info"> <%= job.description %> </td>
+      </tr>
+
+    <% if current_user_admin? %>
+      <tr> 
+        <td><%= link_to 'Edit', edit_job_path(job), :class => 'btn btn-warning btn-sm' %></td>
+        <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
+      </tr>
+    <% end %>
+   </tbody>    
+  <% end %> 
+</table>
+
+
+<script>
+  
+  jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
+
+</script>

@@ -17,6 +17,7 @@ def admin
   @blogs = Blog.order("created_at desc").page(params[:page]).per_page(3)
   @users = User.order("created_at desc").page(params[:page]).per_page(5)
   @events = Event.order("created_at desc").page(params[:page]).per_page(3)
+  @jobs = Job.order("created_at desc").page(params[:page]).per_page(3)
 end
 
 def disable_nav

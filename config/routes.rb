@@ -28,6 +28,9 @@ Rails.application.routes.draw do
  resources :events
  get "admin-event" => 'events#admin'
 
+ resources :jobs
+ get "admin-job" => 'jobs#admin'
+
  resources :users, :except => [:new]
  #get 'signup' => 'users#new'
 

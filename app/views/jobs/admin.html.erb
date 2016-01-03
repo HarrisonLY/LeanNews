@@ -1,0 +1,36 @@
+<% content_for :title, "Job Postings Admin Panel" %>
+
+<!-- Header Image & Text -->
+
+<div class="header_image"> 
+  <div class="header_container">
+    <p class="header_text"> LeanJob </p> 
+    <p class="header_subtext"> Admin Panel </p>
+  </div>
+</div>
+
+<!-- LeanJob Post Table -->
+
+<div class="leantable">
+<div id="notice"><%= notice %> </div>
+
+  <div class="center_text">
+    <%= will_paginate @jobs %>
+  </div>
+
+  <div class="container">
+    <h2> LeanJobs <%= link_to 'New Post', new_job_path, :class => 'btn btn-success btn-sm' %> </h2>  
+      <table class="table">
+        <tbody>
+          <% @jobs.each do |job| %>
+            <tr>
+             <td><%= link_to job.title, job %></td>
+             <td><%= link_to 'Edit', edit_job_path(job), :class => 'btn btn-warning btn-sm' %></td>
+             <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger btn-sm' %></td>
+           </tr>
+         <% end %>
+        </tbody>
+     </table>
+  </div> 
+
+</div>
